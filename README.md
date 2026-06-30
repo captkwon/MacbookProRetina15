@@ -2,7 +2,7 @@
 # OS설치 준비
 - 파일 다운로드
 - 부팅 USB 만들기
-'''
+```
 $ diskutil list
 /dev/disk0 (internal, physical):
 /dev/disk3 (synthesized):
@@ -21,6 +21,6 @@ Password:
 3918290944 bytes transferred in 346.117089 secs (11320709 bytes/sec)
 $ diskutil eject /dev/disk4
 Disk /dev/disk4 ejected
-'''
+```
 - 시스템 종료 후 Option + 전원 키 눌러 USB로 부팅
 - 
