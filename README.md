@@ -50,3 +50,4 @@ $ startx
 $ sudo poweroff or sudo shutdown 0h now
 
 ```
+echo -e '#!/bin/sh -e\nTERM=linux setterm -blank 3 > /dev/tty1\nexit 0' | sudo tee /etc/rc.local && sudo chmod +x /etc/rc.local // 3분 후 화면 off
