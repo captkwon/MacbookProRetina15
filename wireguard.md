@@ -82,7 +82,11 @@ sudo sysctl -w net.ipv4.ip_forward=1
 # 2. 유선 랜 카드를 통한 주소 변환(NAT) 규칙 추가 (인터페이스 이름 확인) (취소시 -A 대신 -D)
 sudo iptables -t nat -A POSTROUTING -o enp0s10 -j MASQUERADE
 
-# 3. 방화벽 리스트 조회
+# 3. 방화벽 UFW 라우팅 허용 (취소시 allow 대신 delete allow)
+sudo ufw route allow in on wg0
+sudo ufw route delete allow in on wg0
+
+# 방화벽 조회
 sudo iptables -t nat -L -n -v
 ```
 
