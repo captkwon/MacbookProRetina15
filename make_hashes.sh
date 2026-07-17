@@ -100,11 +100,7 @@ NR == 1 {
     if ($5 != "OK") {
         result = "ERROR"
     }
-    else if (
-        previous_status == "OK" &&
-        $2 == previous_size &&
-        $3 == previous_hash
-    ) {
+    else if (previous_status == "OK" && $2 == previous_size && $3 == previous_hash) {
         result = "DUPLICATE"
     }
     else {
